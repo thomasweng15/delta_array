@@ -7,3 +7,8 @@
 pip install pyserial
 `
 3. Run the example_movements.py file in the scripts folder.
+
+## Project specific
+`delta_array/arduino/non_ESP_9motor`
+
+`cd delta_array/python/delta_control && python 9motor_test.py` 

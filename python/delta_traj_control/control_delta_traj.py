@@ -58,8 +58,8 @@ if __name__=="__main__":
 
         serialized = delta_message.SerializeToString()
         
-        print(len(serialized))
-        print(len(delta_message.trajectory))
+        # print(len(serialized))
+        # print(len(delta_message.trajectory))
         # print(serialized)
         if b"\xa7" in serialized:
             print("HAKUNA")

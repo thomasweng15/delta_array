@@ -16,18 +16,20 @@ Adafruit_MotorShield MC2 = Adafruit_MotorShield(0x61);
 Adafruit_DCMotor *MC0_M1 = MC0.getMotor(1);
 Adafruit_DCMotor *MC0_M2 = MC0.getMotor(2);
 Adafruit_DCMotor *MC0_M3 = MC0.getMotor(3);
-Adafruit_DCMotor *MC0_M4 = MC0.getMotor(4);
+//Adafruit_DCMotor *MC0_M4 = MC0.getMotor(4);
 Adafruit_DCMotor *MC1_M1 = MC1.getMotor(1);
 Adafruit_DCMotor *MC1_M2 = MC1.getMotor(2);
 Adafruit_DCMotor *MC1_M3 = MC1.getMotor(3);
-Adafruit_DCMotor *MC1_M4 = MC1.getMotor(4);
+//Adafruit_DCMotor *MC1_M4 = MC1.getMotor(4);
 Adafruit_DCMotor *MC2_M1 = MC2.getMotor(1);
 Adafruit_DCMotor *MC2_M2 = MC2.getMotor(2);
 Adafruit_DCMotor *MC2_M3 = MC2.getMotor(3);
-Adafruit_DCMotor *MC2_M4 = MC2.getMotor(4);
+//Adafruit_DCMotor *MC2_M4 = MC2.getMotor(4);
 
 // create array of pointers to motor objects
-Adafruit_DCMotor* motors[NUM_MOTORS] = {MC0_M1, MC0_M2, MC1_M1, MC1_M2, MC2_M1, MC2_M2, MC0_M3, MC0_M4, MC1_M3, MC1_M4, MC2_M4, MC2_M3};
+//Adafruit_DCMotor* motors[NUM_MOTORS] = {MC0_M1, MC0_M2, MC1_M1, MC1_M2, MC2_M1, MC2_M2, MC0_M3, MC0_M4, MC1_M3, MC1_M4, MC2_M4, MC2_M3};
+
+Adafruit_DCMotor* motors[NUM_MOTORS] = {MC0_M1, MC0_M2, MC0_M3, MC1_M1, MC1_M2, MC1_M3, MC2_M1, MC2_M2, MC2_M3};
 //Adafruit_DCMotor* motors[NUM_MOTORS] = {MC1_M1, MC1_M2, MC1_M3, MC1_M4};
 
 // create object to access off-board analog-to-digital converter
@@ -36,8 +38,8 @@ Adafruit_ADS1015 ADC1;
 Adafruit_ADS1015 ADC2;
 
 //Adafruit_ADS1015 adcs[NUM_MOTORS] = {ADC0, ADC0, ADC0, ADC0};
-Adafruit_ADS1015* adcs[NUM_MOTORS] = {&ADC2, &ADC2, &ADC0, &ADC0, &ADC1, &ADC1, &ADC2, &ADC2, &ADC0, &ADC0, &ADC1, &ADC1};
-int channels[NUM_MOTORS] = {3,2,3,2,3,2,1,0,1,0,0,1};
+Adafruit_ADS1015* adcs[NUM_MOTORS] = {&ADC0, &ADC0, &ADC0, &ADC1, &ADC1, &ADC1, &ADC2, &ADC2, &ADC2};
+int channels[NUM_MOTORS] = {0, 1, 2, 0, 1, 2, 0, 1, 2};
 // Calculate based on max input size expected for one command
 #define MAX_INPUT_SIZE 900
 
